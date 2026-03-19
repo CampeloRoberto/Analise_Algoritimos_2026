@@ -1,3 +1,17 @@
+Factorial Recursive Algorithm - Execution Time Test
+-------------------------------------------------------
+n = 10
+Execution time: 0.00000525 seconds
+-------------------------------------------------------
+n = 100
+Execution time: 0.00002670 seconds
+-------------------------------------------------------
+n = 500
+Execution time: 0.00027418 seconds
+-------------------------------------------------------
+n = 1000
+Execution time: 0.00065637 seconds
+
 Os resultados obtidos mostram que o tempo de execução do algoritmo aumenta conforme o valor de n cresce.
 Para n = 10, o tempo registrado é extremamente pequeno, enquanto para n = 100 já se observa um pequeno aumento.
 Quando o valor passa para n = 500 e n = 1000, o tempo continua aumentando gradualmente.
