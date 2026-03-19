@@ -1,0 +1,29 @@
+Os resultados obtidos mostram que o tempo de execução do algoritmo aumenta conforme o valor de n cresce.
+Para n = 10, o tempo registrado é extremamente pequeno, enquanto para n = 100 já se observa um pequeno aumento.
+Quando o valor passa para n = 500 e n = 1000, o tempo continua aumentando gradualmente.
+Esse comportamento ocorre porque o algoritmo de fatorial recursivo executa uma nova chamada da função para cada valor até chegar ao caso base.
+Assim, quanto maior for o número informado, maior será a quantidade de chamadas realizadas e, consequentemente,
+maior será o tempo necessário para concluir o cálculo.
+
+Para determinar a complexidade assintótica, analisamos quantas operações o algoritmo executa em função de n, e não apenas o tempo medido.
+No caso do fatorial recursivo, cada chamada da função executa um conjunto pequeno e constante de operações:
+uma verificação do caso base, uma multiplicação e uma nova chamada recursiva.
+Podemos representar a quantidade de operações da seguinte forma:
+T(n) = T(n - 1) + c
+Sendo:
+T(n) = tempo para calcular o fatorial de n;
+T(n - 1) = tempo da chamada recursiva seguinte;
+c = quantidade constante de operações executadas em cada chamada;
+Expandindo a relação:
+T(n) = T(n - 1) + c
+T(n) = (T(n - 2) + c) + c
+T(n) = T(n - 2) + 2c
+T(n) = T(n - 3) + 3c
+...
+T(n) = T(1) + (n - 1)c
+Como T(1) é constante, o termo dominante passa a ser:
+T(n) ≈ n · c
+Ignorando constantes (regra da notação assintótica):
+T(n) ∈ O(n)
+"""
+
