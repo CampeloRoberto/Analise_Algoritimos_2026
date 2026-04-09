@@ -1,0 +1,31 @@
+1) Merge Sort
+Recorrência: T(n) = 2T(n/2) + n
+Teorema Mestre: a = 2, b = 2, f(n) = n
+n^(log_b a) = n^(log2 2) = n^1 = n
+f(n) = n = Theta(n^1) -> Caso 2
+T(n) = Theta(n log n)
+
+2) Multiplicação de Matrizes
+3 loops aninhados de 1 até n:
+Somatório triplo: sum(i=1..n) sum(j=1..n) sum(k=1..n) 1 = n^3
+T(n) = Theta(n^3)
+
+3) Recorrências
+T(n) = 2T(n/4) + sqrt(n)
+a = 2, b = 4, f(n) = n^(1/2)
+n^(log_b a) = n^(log4 2) = n^(1/2)
+f(n) = Theta(n^(1/2)) -> Caso 2
+T(n) = Theta(sqrt(n) * log n)
+
+T(n) = 2T(n/4) + n
+a = 2, b = 4, f(n) = n
+n^(log_b a) = n^(log4 2) = n^(1/2)
+f(n) = Omega(n^(1/2 + 1/2)) -> Caso 3
+Regularidade: a * f(n/b) = 2*(n/4) = n/2 <= c*n para c = 1/2 (OK)
+T(n) = Theta(n)
+
+T(n) = 16T(n/4) + n^2
+a = 16, b = 4, f(n) = n^2
+n^(log_b a) = n^(log4 16) = n^2
+f(n) = Theta(n^2) -> Caso 2
+T(n) = Theta(n^2 * log n)
