@@ -1,0 +1,45 @@
+Qual K teve melhor desempenho?
+
+Os melhores resultados foram obtidos com K = 3 e K = 5 utilizando a métrica Manhattan.
+
+Ambos alcançaram acurácia de 0.9649 (96,49%), apresentando apenas 4 erros na matriz de confusão.
+
+Isso mostra que valores intermediários de K produziram classificações mais estáveis e precisas.
+
+
+Qual métrica obteve melhor resultado?
+
+A métrica Manhattan apresentou o melhor desempenho geral.
+
+Com K = 3 e K = 5, ela atingiu acurácia superior à distância Euclidiana:
+
+- Euclidiana: 94,74%
+- Manhattan: 96,49%
+
+Isso indica que, para este conjunto de dados, a distância Manhattan conseguiu separar melhor os padrões entre tumores benignos e malignos.
+
+
+O que aconteceu com K muito pequeno?
+
+Quando K = 1, o modelo apresentou desempenho inferior em ambas as métricas.
+
+Isso acontece porque:
+- o algoritmo fica muito sensível a ruídos;
+- qualquer ponto fora do padrão pode influenciar diretamente a classificação;
+- ocorre overfitting.
+
+No caso da distância Manhattan com K = 1, houve aumento de erros, principalmente falsos negativos, reduzindo a acurácia para 92,11%.
+
+
+Por que normalizar é importante?
+
+A normalização é importante porque o algoritmo K-NN utiliza cálculo de distância entre os dados.
+
+Sem normalização:
+- atributos com valores maiores dominam os cálculos;
+- atributos menores perdem influência;
+- o resultado pode ficar distorcido.
+
+O StandardScaler foi utilizado para colocar todos os atributos em escalas semelhantes.
+
+Isso melhora significativamente a precisão do K-NN e torna o cálculo das distâncias mais equilibrado.
